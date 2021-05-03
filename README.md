@@ -134,3 +134,15 @@ Be sure to include any preliminary setup information, such as installing depende
 
 ---
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+# Solution 
+
+## Part One
+* Creating my new wallet for my new test ETH blockchain. In this test example the main test account mnemonic phrase is: acid movie neglect organ health diagram blade neutral glue flush false pulp. Access both my public and privates keys under my test wallet. Public address is: " 0x845DE31F7001671287812Cb689DaC880200AB33b ". It is under the Ropsten testnet. 
+* Then I created the two nodes that will be minig and completing the chains. Mining node is called miner and the second node is helper. Public address to miner is: 0x530545857c3216F45Cbd9cd32Db682CE790C6ebB . Helper node public key is:  0x6d155320fBa3706e513BD9CF47e9C7bD2C00a919. 
+* The genesis block vim will have my accouunts prefunded (the miner and helper node). Json file was saved and now we have everything to begin mining.
+
+## Part Two
+* Part two we initialize the nodes to the gensis block. Following that we will then set them to mine. First starting with with NodeM we will start the mining process with " ./geth --datadir node1 --unlock "0x530545857c3216F45Cbd9cd32Db682CE790C6ebB" --mine --rpc --allow-insecure-unlock". Thn we follow up with nodeH iniatilize it with this code " ./geth --datadir node2 --unlock "0x6d155320fBa3706e513BD9CF47e9C7bD2C00a919" --mine --port 30304 --bootnodes "enode://aeedb912e6ccd4e7dc36041de7b43a732ccc7e4e65ccb280d915d984fc0e0b68b48136671d48f94a74fb8e0eb59f09fa44631774d15846b795fb25f7c749bae2@127.0.0.1:30303" --ipcdisable --allow-insecure-unlock" this way they both mine. Then we check our Mycrypto and make sure to add your new network by creating a custom network in MyCrypto and you add your chain id, currency(ETH) and your local host address. Since we prefunded both accounts they automatically will have a large balance (self made rich :-D ).
+
+##Part Three
+* Start a transaction between both nodeM and nodeH. Monitor the transaction status until successful. Then done! Yout test network is completed please see the snap shots and follow this simple theoritical guide to take you there. Download all the files i have uploaded so you can execute your own testnet!
